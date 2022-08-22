@@ -1,0 +1,96 @@
+body {
+  background-color: #9dacd4;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  color: #fff;
+  font-family: "Courier New", "Courier", sans-serif;
+  background: linear-gradient(
+    62deg,
+    rgba(216, 182, 246, 1) 0%,
+    rgba(184, 185, 234, 1) 50%,
+    rgba(182, 217, 246, 1) 100%
+  );
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.num {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+
+.one-one {
+  position: absolute;
+  top: 12px;
+  left: -20px;
+  width: 45px;
+  height: 25px;
+  background-color: white;
+  border-radius: 4px;
+  transform: rotate(-50deg);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.one-two {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 25px;
+  height: 100px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.zero-one,
+.zero-two {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: white 25px solid;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.zero-two {
+  left: 110px;
+}
+
+.days {
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: -10px;
+  text-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
+}
+
+.css-challenge {
+  margin-top: -20px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
+}
