@@ -1,0 +1,138 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  background-color: #acc5e3;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.menu-icon div {
+  background-color: #fff;
+  width: 100px;
+  height: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.menu-icon div:last-child {
+  margin-bottom: 0;
+}
+
+.line-1.animate {
+  animation-name: animate-line-1;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.line-2.animate {
+  animation-name: animate-line-2;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.line-3.animate {
+  animation-name: animate-line-3;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.line-1 {
+  animation-name: animate-line-1-rev;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+}
+
+.line-2 {
+  animation-name: animate-line-2-rev;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+}
+
+.line-3 {
+  animation-name: animate-line-3-rev;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+}
+
+.start {
+  animation: none !important;
+}
+
+/* animation */
+@keyframes animate-line-1 {
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(25px) rotate(45deg);
+  }
+}
+
+@keyframes animate-line-2 {
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes animate-line-3 {
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(-25px) rotate(-45deg);
+  }
+}
+
+/* animation reverse */
+@keyframes animate-line-1-rev {
+  0% {
+    transform: translateY(25px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-line-2-rev {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-line-3-rev {
+  0% {
+    transform: translateY(-25px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
