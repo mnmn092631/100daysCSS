@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.big {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.small {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #a1bfba;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 280px;
+  height: 220px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* header */
+.header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  color: #fff;
+  background-color: #e3d0bf;
+}
+
+.title {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+dl {
+  text-align: right;
+}
+
+/* section */
+.section {
+  background-color: #fff;
+  width: 100%;
+  height: 75%;
+}
+
+.parameter {
+  color: #8c8c8c;
+  text-align: right;
+}
+
+.parameter span {
+  position: relative;
+  padding: 0 10px;
+  font-size: 9px;
+}
+
+.parameter span::before {
+  position: absolute;
+  top: 6px;
+  left: -6px;
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.parameter .red::before {
+  content: "";
+  background-color: #fa7373;
+}
+
+.parameter .blue::before {
+  content: "";
+  background-color: #7ba2ff;
+}
+
+.statistic {
+  position: relative;
+  width: 100%;
+  height: 140px;
+}
+
+.data {
+  position: absolute;
+  top: 15px;
+}
+
+.data svg {
+  width: 100%;
+  height: 100px;
+}
+
+polyline {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.red polyline {
+  stroke: #fa7373;
+}
+
+.blue polyline {
+  stroke: #7ba2ff;
+}
+
+.points > div {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.red > .points > div {
+  background-color: #fa7373;
+}
+
+.blue > .points > div {
+  background-color: #7ba2ff;
+}
+
+.red .point-1 {
+  left: 18px;
+  top: 42px;
+}
+
+.red .point-2 {
+  left: 58px;
+  top: 10px;
+}
+
+.red .point-3 {
+  left: 98px;
+  top: 20px;
+}
+
+.red .point-4 {
+  left: 138px;
+  top: 9px;
+}
+
+.red .point-5 {
+  left: 178px;
+  top: 36px;
+}
+
+.red .point-6 {
+  left: 218px;
+  top: 45px;
+}
+
+.red .point-7 {
+  left: 258px;
+  top: 16px;
+}
+
+.blue .point-1 {
+  left: 18px;
+  top: 59px;
+}
+
+.blue .point-2 {
+  left: 58px;
+  top: 48px;
+}
+
+.blue .point-3 {
+  left: 98px;
+  top: 62px;
+}
+
+.blue .point-4 {
+  left: 138px;
+  top: 53px;
+}
+
+.blue .point-5 {
+  left: 178px;
+  top: 58px;
+}
+
+.blue .point-6 {
+  left: 218px;
+  top: 71px;
+}
+
+.blue .point-7 {
+  left: 258px;
+  top: 61px;
+}
+
+.tooltip {
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  top: -27px;
+  left: -13px;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms ease-in;
+}
+
+.points > div:hover > .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 10px;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.statistic .red .tooltip {
+  background-color: #fa7373;
+}
+
+.statistic .red .tooltip::before {
+  border-top-color: #fa7373;
+}
+
+.statistic .blue .tooltip {
+  background-color: #7ba2ff;
+}
+
+.statistic .blue .tooltip::before {
+  border-top-color: #7ba2ff;
+}
+
+.days {
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  font-size: 9px;
+  color: #949494;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 8px;
+}
