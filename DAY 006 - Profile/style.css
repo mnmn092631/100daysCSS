@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: rgb(105, 120, 140);
+  background: linear-gradient(
+    62deg,
+    rgba(105, 120, 140, 1) 0%,
+    rgba(217, 217, 217, 1) 100%
+  );
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #fff;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.profile {
+  width: 200px;
+  height: 300px;
+  text-align: center;
+}
+
+.image {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  margin: 35px auto 0;
+}
+
+.circle-1 {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  left: -3px;
+  top: -3px;
+  border: 2px solid #8a99a6;
+  border-radius: 50%;
+  border-color: #8a99a6 #8a99a6 #8a99a6 transparent;
+  transition: transform 1.5s ease-in;
+}
+
+.circle-2 {
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  left: -6px;
+  top: -6px;
+  border: 2px solid #8a99a6;
+  border-radius: 50%;
+  border-color: #8a99a6 transparent #8a99a6 #8a99a6;
+  transition: transform 1.5s ease-in;
+}
+
+.image:hover > .circle-1 {
+  transform: rotate(360deg);
+}
+
+.image:hover > .circle-2 {
+  transform: rotate(-360deg);
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.name {
+  display: block;
+  color: #8a99a6;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.job {
+  display: block;
+  color: #8a99a6;
+  font-size: 11px;
+}
+
+.btn {
+  display: block;
+  width: 120px;
+  height: 30px;
+  margin: 0 auto;
+  color: #8a99a6;
+  border: 1px solid #8a99a6;
+  border-radius: 100px;
+  transition: all 350ms ease-in;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #8a99a6;
+  color: #fff;
+}
+
+.btn:first-child {
+  margin-top: 33px;
+  margin-bottom: 10px;
+}
+
+/* stats */
+.stats {
+  width: 120px;
+  height: 300px;
+  color: #8a99a6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stats > div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 120px;
+  height: 99px;
+  transition: background-color 350ms ease-in;
+  cursor: pointer;
+}
+
+.stats > div:hover {
+  background-color: #c5d6db;
+}
+
+.stats dt {
+  font-size: 11px;
+}
+
+.stats dd {
+  font-size: 18px;
+  font-weight: 600;
+}
