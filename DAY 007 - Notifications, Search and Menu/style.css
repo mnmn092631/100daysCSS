@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: rgb(199, 199, 199);
+}
+
+.panel {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: transform 500ms ease-in;
+  z-index: 2;
+}
+
+.panel.show-menu {
+  transform: translateX(150px);
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #348abf;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+}
+
+.menu-icon {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  left: 20px;
+  top: 23px;
+  cursor: pointer;
+}
+
+.dash {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 4px;
+}
+
+.dash.top {
+  width: 21px;
+  top: 0;
+  left: 0;
+}
+
+.dash.bottom {
+  top: 10px;
+  left: 0;
+}
+
+header .circle {
+  position: absolute;
+  top: -2px;
+  left: 23px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.menu-icon > div {
+  background-color: #acd7f2;
+  transition: background-color 250ms ease-in;
+}
+
+.menu-icon:hover > div {
+  background-color: #fff;
+}
+
+.title {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.search-input {
+  position: absolute;
+  top: 13px;
+  right: 55px;
+  width: 230px;
+  height: 34px;
+  padding: 0 17px;
+  border-radius: 17px;
+  transform: translateX(15px);
+  opacity: 0;
+  transition: all 350ms ease-in-out;
+  pointer-events: none;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  height: 60px;
+  line-height: 60px;
+  top: 0;
+  right: 20px;
+  cursor: pointer;
+  color: #acd7f2;
+  transition: color 250ms ease-in;
+}
+
+.fa-magnifying-glass:hover {
+  color: #fff;
+}
+
+/* notifications */
+.notifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 20px 0;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.line {
+  position: absolute;
+  width: 3px;
+  left: 27px;
+  top: -25px;
+  bottom: 0px;
+  background-color: #348abf;
+}
+
+.notification {
+  position: relative;
+  margin: 0 20px 0 43px;
+  cursor: pointer;
+}
+
+.notification:hover {
+  color: #348abf;
+}
+
+.notification:nth-child(2) {
+  animation: here-am-i 500ms ease-out both;
+}
+.notification:nth-child(3) {
+  animation: here-am-i 500ms ease-out 500ms both;
+}
+.notification:nth-child(4) {
+  animation: here-am-i 500ms ease-out 1s both;
+}
+
+.notification .circle {
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: #acd7f2;
+  border: 2px solid #2f4659;
+  border-radius: 50%;
+}
+
+.notification .time {
+  font-size: 11px;
+}
+
+.notification p {
+  font-size: 15px;
+}
+
+.notification strong {
+  margin-right: 5px;
+}
+
+/* menu */
+.menu {
+  position: absolute;
+  width: 150px;
+  height: 270px;
+  top: 65px;
+  left: 50px;
+  background-color: #5a82ad;
+  border-radius: 4px 0 0 4px;
+  color: #c3ddfa;
+  transform: translateX(20px);
+  transition: all 500ms ease-in;
+}
+
+.menu.active {
+  transform: translateX(0);
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.menu ul li i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.menu ul li {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  transition: all 250ms ease-in;
+  cursor: pointer;
+}
+
+.menu ul li:hover {
+  background-color: #2f4659;
+  color: #fff;
+}
+
+/* animation */
+@keyframes here-am-i {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
