@@ -1,0 +1,317 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  background-color: #011826;
+}
+
+.moon {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: #d9c68f;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 3px #d9c68f;
+  animation: moon-rise 500ms ease-in forwards;
+  overflow: hidden;
+}
+
+.crater-1 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(140, 127, 88, 0.1);
+  top: 15px;
+  left: -5px;
+}
+
+.crater-2 {
+  @extend .crater-1;
+  top: 5px;
+  left: 25px;
+  width: 15px;
+  height: 10px;
+}
+
+.crater-3 {
+  @extend .crater-1;
+  top: 15px;
+  left: 25px;
+  width: 5px;
+  height: 10px;
+}
+
+.crater-4 {
+  @extend .crater-1;
+  top: 30px;
+  left: 10px;
+  width: 5px;
+  height: 8px;
+}
+
+.crater-5 {
+  @extend .crater-1;
+  top: 25px;
+  left: 20px;
+  width: 5px;
+  height: 5px;
+}
+
+.crater-6 {
+  @extend .crater-1;
+  top: 45px;
+  left: 45px;
+  width: 5px;
+  height: 5px;
+}
+
+.crater-7 {
+  @extend .crater-1;
+  top: 50px;
+  left: 15px;
+  width: 8px;
+  height: 8px;
+}
+
+.crater-8 {
+  @extend .crater-1;
+  top: 25px;
+  left: 35px;
+  width: 10px;
+  height: 15px;
+}
+
+.crater-9 {
+  @extend .crater-1;
+  top: 45px;
+  left: 25px;
+  width: 15px;
+  height: 10px;
+}
+
+.crater-10 {
+  @extend .crater-1;
+  top: 60px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.crater-11 {
+  @extend .crater-1;
+  top: 15px;
+  left: 13px;
+  width: 10px;
+  height: 10px;
+}
+
+.hill-bg-1 {
+  position: absolute;
+  bottom: 30px;
+  left: -20px;
+  width: 250px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #032940;
+}
+
+.hill-bg-2 {
+  @extend .hill-bg-1;
+  width: 250px;
+  left: 250px;
+  bottom: 40px;
+}
+
+.hill-fg-1 {
+  @extend .hill-bg-1;
+  background-color: #395d73;
+  width: 300px;
+  left: -100px;
+  bottom: -30px;
+}
+
+.hill-fg-2 {
+  @extend .hill-fg-1;
+  left: 80px;
+  bottom: 10px;
+  width: 280px;
+}
+
+.hill-fg-3 {
+  @extend .hill-fg-1;
+  left: 300px;
+  bottom: -30px;
+}
+
+.front {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  z-index: 1;
+}
+
+.temperature {
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #032940;
+  margin-right: 10px;
+}
+
+.info {
+  font-weight: 300;
+  color: #032940;
+  margin-right: 60px;
+}
+
+.front > table {
+  color: #032940;
+  font-weight: 300;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.front > table td:last-child {
+  font-weight: 400;
+  padding-left: 5px;
+}
+
+@for $i from 1 to 10 {
+  .drop-big-#{$i} {
+    position: absolute;
+    left: (-15 + 38 * $i) + px;
+    bottom: 95px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #2983a6;
+    transform-origin: 50% 100%;
+    animation: rain-drop
+      (0.7 + random(2) / 10) +
+      s
+      linear
+      (random(50) / 25) +
+      s
+      infinite
+      both;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 1px;
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #2983a6;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 2px;
+      width: 4px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #2983a6;
+    }
+  }
+  .drop-medium-#{$i} {
+    @extend .drop-big-1;
+    left: (-15 + 38 * $i) + px;
+    opacity: 0.6;
+    background-color: #5eadbf;
+    width: 6px;
+    height: 6px;
+    animation: rain-drop
+      (1.3 + random(2) / 10) +
+      s
+      linear
+      (random(50) / 25) +
+      s
+      infinite
+      both;
+
+    &:before {
+      top: -2px;
+      left: 1px;
+      width: 4px;
+      height: 4px;
+    }
+
+    &:after {
+      top: -4px;
+      left: 2px;
+      width: 2px;
+      height: 6px;
+    }
+  }
+  .drop-small-#{$i} {
+    @extend .drop-big-1;
+    background-color: #368abf;
+    left: (-10 + 38 * $i) + px;
+    opacity: 0.3;
+    width: 4px;
+    height: 4px;
+    animation: rain-drop
+      (1.9 + random(2) / 10) +
+      s
+      linear
+      (random(50) / 25) +
+      s
+      infinite
+      both;
+    animation-fill-mode: both;
+
+    &:before {
+      top: -2px;
+      left: 1px;
+      width: 2px;
+      height: 2px;
+    }
+
+    &:after {
+      top: -3px;
+      left: 1px;
+      width: 2px;
+      height: 4px;
+    }
+  }
+}
+
+/* animation */
+@keyframes moon-rise {
+  from {
+    transform: translate(-20px, 100px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes rain-drop {
+  0% {
+    transform: translate(40px, -320px) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  75% {
+    transform: translate(0, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  100% {
+    transform: translate(0, 0) scaleX(3) scaleY(0) rotate(0deg);
+  }
+}
