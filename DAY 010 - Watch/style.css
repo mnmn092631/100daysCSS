@@ -1,0 +1,118 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #585859;
+}
+
+.watch {
+  position: absolute;
+  top: 75px;
+  left: 75px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  border: 5px solid #8c8c8c;
+}
+
+.lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.lines > circle {
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  stroke: red;
+  stroke-width: 3px;
+  animation: stroke-dashoffset 5s linear infinite both;
+  stroke-dasharray: 722.2;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.dots > circle {
+  fill: transparent;
+  stroke: #8c8c8c;
+  stroke-dasharray: 0px 15px;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.content {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.today {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.time {
+  margin: -10px 0 -5px 0;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.heartRate-kcal {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.fa-heart {
+  color: red;
+  margin-right: 5px;
+  padding-top: 1px;
+  animation: heart-beating 500ms linear alternate infinite both;
+}
+
+.kcal {
+  margin-left: 15px;
+  text-transform: uppercase;
+}
+
+/* animation */
+@keyframes heart-beating {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+
+@keyframes stroke-dashoffset {
+  0% {
+    stroke-dashoffset: 722.2;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -722.2;
+  }
+}
