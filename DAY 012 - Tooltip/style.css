@@ -1,0 +1,120 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #4c594f;
+  color: #fff;
+}
+
+.quote {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+}
+
+.quote::before {
+  content: ",,";
+  position: absolute;
+  top: -70px;
+  left: -35px;
+  font-family: Arial;
+  font-size: 250px;
+  color: #bfbfb8;
+  opacity: 0.5;
+  letter-spacing: -0.1em;
+  line-height: 35px;
+}
+
+.quote > p {
+  font-size: 25px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: #a4a69c;
+  padding: 0 5px 5px 5px;
+  margin: -10px 0;
+  cursor: pointer;
+}
+
+.tooltip:hover .info,
+.tooltip:focus .info {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  left: -80px;
+  width: 300px;
+  visibility: hidden;
+  font-size: 15px;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 500ms ease-in, opacity 500ms ease-in;
+}
+
+.info::before {
+  position: absolute;
+  bottom: -10px;
+  content: "";
+  width: 100%;
+  height: 20px;
+}
+
+.info::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 135px;
+  width: 10px;
+  height: 10px;
+  background-color: #bfbfb8;
+  transform: rotate(45deg);
+}
+
+.pronounce {
+  background-color: #fff;
+  color: #bfbfb8;
+  padding: 10px;
+}
+
+.pronounce i {
+  position: absolute;
+  top: 14px;
+  left: 90px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.pronounce i:hover {
+  transform: scale(1.2);
+}
+
+.text {
+  background-color: #bfbfb8;
+  color: #fff;
+  padding: 10px;
+}
+
+.quote > span {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+}
