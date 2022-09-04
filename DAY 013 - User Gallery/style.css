@@ -1,0 +1,226 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  position: relative;
+  width: 194px;
+  height: 194px;
+  margin: 4px 0 0 4px;
+  cursor: pointer;
+}
+
+.section:hover > .overlay {
+  opacity: 0.4;
+}
+
+.section:hover > .plus {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0;
+}
+
+.plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  background-color: #ec6565;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(2);
+  transition: all 400ms ease-in-out;
+}
+
+.plus::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  top: 24px;
+  left: 18px;
+  background-color: #fff;
+}
+
+.plus::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 14px;
+  top: 18px;
+  left: 24px;
+  background-color: #fff;
+}
+
+.detail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.detail.active {
+  pointer-events: auto;
+}
+
+.detail.active > .header {
+  transform: translate(0, 0);
+  transition: all 600ms ease-out;
+}
+
+.detail.active > .image {
+  transform: translate(0, 0);
+  transition: all 600ms ease-out 300ms;
+}
+
+.detail.active > .infos {
+  transform: translate(0, 0);
+  transition: all 600ms ease-out;
+}
+
+.detail.active > .close {
+  transform: rotate(45deg) translate(0, 0);
+  transition: background-color 300ms ease-in-out, transform 600ms ease-out 600ms;
+}
+
+.close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: 10px;
+  background-color: #ec6565;
+  border-radius: 50%;
+  transform: rotate(45deg) translate(-105%, -105%);
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out, transform 500ms ease-in;
+  z-index: 1;
+}
+
+.close::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 2px;
+  top: 24px;
+  left: 18px;
+  background-color: #fff;
+  transition: all 300ms ease-in-out;
+}
+
+.close::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 14px;
+  top: 18px;
+  left: 24px;
+  background-color: #fff;
+  transition: all 300ms ease-in-out;
+}
+
+.close:hover {
+  background-color: #fff;
+}
+
+.close:hover::before,
+.close:hover::after {
+  background-color: #ec6565;
+}
+
+.header {
+  display: block;
+  transform: translate(0, -105%);
+  transition: all 600ms ease-in 400ms;
+}
+
+.detail > .image {
+  box-sizing: border-box;
+  position: absolute;
+  top: 130px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 4px 6px 15px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform: translate(0, -250px);
+  transition: all 600ms ease-in 200ms;
+  z-index: 1;
+}
+
+.detail > .image > img {
+  width: 100%;
+  height: auto;
+}
+
+.infos {
+  box-sizing: border-box;
+  background-color: #ec6565;
+  height: 220px;
+  padding-top: 67px;
+  transform: translate(0, 105%);
+  transition: all 600ms ease-in 400ms;
+}
+
+.infos > span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+.action {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.action > button {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin: 0 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+}
+
+.action > button:hover {
+  background-color: #fff;
+  color: #ec6565;
+  box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
