@@ -72,7 +72,7 @@
 
 .info::before {
   position: absolute;
-  bottom: -10px;
+  bottom: -14px;
   content: "";
   width: 100%;
   height: 20px;
@@ -97,7 +97,7 @@
 
 .pronounce i {
   position: absolute;
-  top: 14px;
+  top: 13px;
   left: 90px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
