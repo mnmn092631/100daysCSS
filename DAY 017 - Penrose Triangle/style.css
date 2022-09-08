@@ -1,0 +1,69 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lines {
+  position: relative;
+  width: 570px;
+  top: -79px;
+  left: -87px;
+  transform: rotate(45deg);
+}
+.line {
+  background-color: #000;
+  width: 100%;
+  height: 3px;
+  margin-bottom: 20px;
+}
+
+.center {
+  position: absolute;
+  top: 75px;
+  left: 75px;
+  width: 250px;
+  height: 250px;
+  background-color: #000;
+  border-radius: 3px;
+  box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.polygon {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middle {
+  fill: #d2d1d1;
+  transition: fill 500ms ease-in-out;
+}
+.dark {
+  fill: #999898;
+  transition: fill 500ms ease-in-out;
+}
+.light {
+  fill: #f4f3f3;
+  transition: fill 500ms ease-in-out;
+}
+
+.polygon:hover > .middle {
+  fill: #f4f3f3;
+}
+.polygon:hover > .dark {
+  fill: #d2d1d1;
+}
+.polygon:hover > .light {
+  fill: #999898;
+}
