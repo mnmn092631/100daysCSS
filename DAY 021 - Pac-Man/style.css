@@ -1,0 +1,82 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #261e21;
+}
+
+.pacman {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+  fill: none;
+  stroke: #f2bb16;
+  stroke-width: 50px;
+  stroke-dasharray: 157;
+  animation: mouth 800ms ease-in-out infinite;
+}
+
+.eye {
+  position: absolute;
+  fill: #261e21;
+  top: 169px;
+  left: 209px;
+  width: 12px;
+  height: 12px;
+  animation: eye 800ms ease-in-out infinite;
+}
+
+.dots {
+  position: absolute;
+  top: 192px;
+  left: 180px;
+  width: 240px;
+  height: 16px;
+  stroke: #f2bb16;
+  stroke-width: 16px;
+  stroke-linecap: round;
+  stroke-dasharray: 0px 60px;
+  stroke-dashoffset: 16;
+  animation: dots 800ms linear infinite;
+}
+
+/* animation */
+@keyframes mouth {
+  0%,
+  100% {
+    stroke-dashoffset: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    stroke-dashoffset: 31.4;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes eye {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+}
+
+@keyframes dots {
+  0% {
+    stroke-dashoffset: 16;
+  }
+  100% {
+    stroke-dashoffset: 76;
+  }
+}
