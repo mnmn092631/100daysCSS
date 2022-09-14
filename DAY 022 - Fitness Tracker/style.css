@@ -1,0 +1,173 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #024059;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.title > strong {
+  display: block;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 22px;
+}
+
+.kcal {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 25px auto;
+}
+
+.kcal > svg {
+  width: 120px;
+  height: 120px;
+}
+
+.kcal > svg > .bg {
+  fill: none;
+  stroke: #042940;
+  stroke-width: 10px;
+}
+
+.kcal > svg > .progress {
+  fill: none;
+  stroke: #dbf227;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke-dasharray: 345.4;
+  stroke-dashoffset: 70;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  animation: kcal 1s ease-in-out forwards;
+}
+
+.kcal > .text {
+  position: absolute;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kcal > .text > strong {
+  display: block;
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.circles {
+  margin: 0 auto;
+  width: 400px;
+  height: 80px;
+  text-align: center;
+}
+
+.circle {
+  margin: 0 20px;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.circle > .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 14px;
+}
+
+.circle > .text > strong {
+  display: block;
+  font-size: 18px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.circle > svg {
+  width: 80px;
+  height: 80px;
+}
+
+.circle > svg > .bg {
+  fill: none;
+  stroke: #042940;
+  stroke-width: 5px;
+}
+
+.circle > svg > .progress {
+  fill: none;
+  stroke: #0cf25d;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-dasharray: 219.8;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+}
+
+.steps.circle > svg > .progress {
+  stroke-dashoffset: 80;
+  animation: steps 1s ease-in-out forwards;
+}
+
+.km.circle > svg > .progress {
+  stroke-dashoffset: 140;
+  animation: km 1s ease-in-out forwards;
+}
+
+/* animation */
+@keyframes kcal {
+  from {
+    stroke-dashoffset: 345.4;
+  }
+  to {
+    stroke-dashoffset: 70;
+  }
+}
+
+@keyframes steps {
+  from {
+    stroke-dashoffset: 219.8;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+@keyframes km {
+  from {
+    stroke-dashoffset: 219.8;
+  }
+  to {
+    stroke-dashoffset: 140;
+  }
+}
