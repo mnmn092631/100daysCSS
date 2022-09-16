@@ -1,0 +1,135 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #faf274;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.button {
+  box-sizing: border-box;
+  position: absolute;
+  top: 180px;
+  left: 100px;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 36px;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #dbd365;
+}
+
+.button > img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  opacity: 0;
+}
+
+.circle {
+  position: absolute;
+  top: 170px;
+  left: 170px;
+  width: 60px;
+  height: 60px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-dasharray: 183 183;
+  stroke-dashoffset: 183;
+  transform: rotate(-90deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+input:checked ~ .button {
+  animation: button 500ms ease-in-out both, fill 0.5s ease-out 1.5s forwards;
+}
+
+input:checked ~ .button > img {
+  animation: check 0.5s ease-out 1.5s both;
+}
+
+input:checked ~ .circle {
+  animation: circle 2s ease-out 0.5s both;
+}
+
+/* animation */
+@keyframes button {
+  0% {
+    width: 200px;
+    left: 100px;
+    border-color: #fff;
+    color: #fff;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    width: 40px;
+    left: 180px;
+    border-color: #dbd365;
+    background: transparent;
+    color: transparent;
+  }
+}
+
+@keyframes fill {
+  0% {
+    background: transparent;
+    border-color: #fff;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 183;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 183;
+    transform: rotate(-90deg) scale(1);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    stroke-dasharray: 500 500;
+    transform: rotate(-90deg) scale(2);
+    opacity: 0;
+  }
+}
