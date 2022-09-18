@@ -1,0 +1,108 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #c9d2de;
+}
+
+.card {
+  position: absolute;
+  top: 125px;
+  left: 75px;
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card.active {
+  z-index: 1;
+  opacity: 1;
+  pointer-events: all;
+  animation: fadeIn 600ms ease-in-out both 500ms;
+}
+
+.card.inactive {
+  animation: fadeOut 500ms ease-in-out both;
+}
+
+.number-bg {
+  position: absolute;
+  right: -25px;
+  top: -10px;
+  width: 70px;
+  height: 40px;
+  background-color: #57647b;
+  transform: rotate(45deg);
+}
+
+.number {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.text {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.header {
+  color: #585858;
+  font-size: 16px;
+}
+
+.text > p {
+  color: #a4a3a3;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #88a2c9;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
