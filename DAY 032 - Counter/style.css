@@ -1,0 +1,162 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #f3b562;
+}
+
+.counter {
+  position: absolute;
+  top: 185px;
+  left: 140px;
+  width: 120px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 2px 2px 5px 2px rgba(180, 175, 132, 0.3);
+}
+
+.minus {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+}
+
+.minus:hover {
+  background-color: #f06060;
+}
+
+.minus:hover > .line {
+  background-color: #fff;
+}
+
+.minus > .line {
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 20px;
+  height: 4px;
+  background-color: #f06060;
+  border-radius: 100px;
+  transition: background-color 250ms ease-in-out;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  color: #5c4b51;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+}
+
+.number > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.number > span.fadeInUp {
+  animation: fadeIn 0.3s ease-out 0.15s backwards;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.number > span.fadeOutUp {
+  animation: fadeOut 0.3s ease-in;
+  transform: scale(1.4);
+  opacity: 0;
+}
+
+.number > span.fadeInDown {
+  animation: fadeOut 0.3s ease-out 0.15s reverse backwards;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.number > span.fadeOutDown {
+  animation: fadeIn 0.3s ease-in reverse;
+  transform: scale(0.6);
+  opacity: 0;
+}
+
+.plus {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+}
+
+.plus:hover {
+  background-color: #8cbeb2;
+}
+
+.plus:hover > div {
+  background-color: #fff;
+}
+
+.plus > .line-h {
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 20px;
+  height: 4px;
+  background-color: #8cbeb2;
+  border-radius: 100px;
+  transition: background-color 250ms ease-in-out;
+}
+
+.plus > .line-v {
+  position: absolute;
+  top: 5px;
+  left: 13px;
+  width: 4px;
+  height: 20px;
+  background-color: #8cbeb2;
+  border-radius: 100px;
+  transition: background-color 250ms ease-in-out;
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
