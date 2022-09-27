@@ -1,0 +1,137 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(
+    0deg,
+    #f27d72 0%,
+    #f29f80 10%,
+    #f2c288 20%,
+    #7a9fbf 60%,
+    #426a8c 100%
+  );
+  animation: fade-out 60s linear infinite;
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  height: 800px;
+  background: linear-gradient(
+    0deg,
+    #f27d72 0%,
+    #f29f80 10%,
+    #f2c288 20%,
+    #7a9fbf 60%,
+    #426a8c 100%
+  );
+  animation: bg 60s linear forwards;
+}
+
+.sun {
+  position: absolute;
+  bottom: 100px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eccd93;
+  box-shadow: 0px 0px 10px 7px #f2ba52;
+  animation: sunrise 60s ease-in-out forwards;
+}
+
+.cloud-1 {
+  position: absolute;
+  top: 50px;
+  right: -151px;
+  width: 151px;
+  height: 72px;
+  fill: rgba(255, 255, 255, 0.5);
+  animation: cloud-move 60s linear alternate infinite;
+}
+
+.cloud-2 {
+  position: absolute;
+  bottom: 70px;
+  right: -30px;
+  width: 114px;
+  height: 57px;
+  fill: rgba(255, 255, 255, 0.5);
+  animation: cloud-move 60s linear alternate infinite;
+}
+
+.cloud-3 {
+  position: absolute;
+  bottom: 110px;
+  left: 100px;
+  width: 66px;
+  height: 30px;
+  fill: rgba(255, 255, 255, 0.5);
+  animation: cloud-move 60s linear alternate infinite;
+}
+
+.cloud-4 {
+  position: absolute;
+  bottom: 190px;
+  right: 60px;
+  width: 120px;
+  height: 60px;
+  fill: rgba(255, 255, 255, 0.5);
+  animation: cloud-move 60s linear alternate infinite;
+}
+
+.cloud-5 {
+  position: absolute;
+  bottom: 170px;
+  right: 110px;
+  width: 120px;
+  height: 60px;
+  fill: rgba(255, 255, 255, 0.5);
+  animation: cloud-move 60s linear alternate infinite;
+}
+
+.cloud-6 {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  width: 120px;
+  height: 60px;
+  fill: rgba(255, 255, 255, 0.5);
+  animation: cloud-move 60s linear alternate infinite;
+}
+
+/* animation */
+@keyframes sunrise {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(350px, -200px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-400%);
+  }
+}
+
+@keyframes bg {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(400px);
+  }
+}
