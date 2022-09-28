@@ -1,0 +1,74 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #e6819d;
+  font-size: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line {
+  width: 224px;
+  height: 2px;
+  margin: 10px 0;
+  background-color: #fff;
+  animation: line 800ms ease-in-out both;
+}
+
+.text {
+  width: 224px;
+  height: 53px;
+  stroke: #e6819d;
+  stroke-dasharray: 270;
+  stroke-dashoffset: 0;
+}
+
+.a1 {
+  fill: #fff;
+  stroke-width: 6;
+  animation: fill 1.2s ease-in-out both;
+}
+
+.a2 {
+  fill: none;
+  stroke-width: 12;
+  animation: fill 1.7s ease-in-out both;
+}
+
+.a3 {
+  fill: none;
+  stroke-width: 18;
+  animation: fill 2.2s ease-in-out both;
+}
+
+/* animation */
+@keyframes line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fill {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 270;
+  }
+}
