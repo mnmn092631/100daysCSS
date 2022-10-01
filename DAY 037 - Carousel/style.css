@@ -1,0 +1,111 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #566275;
+}
+
+.center {
+  position: absolute;
+  top: 145px;
+  left: 0;
+  width: 400px;
+  height: 110px;
+  transform: perspective(80px);
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 135px;
+  width: 130px;
+  height: 110px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.top {
+  width: 100%;
+  height: 25px;
+  background-color: #9ba6fa;
+  border-radius: 4px 4px 0 0;
+}
+
+.content {
+  padding: 10px;
+}
+
+.line {
+  height: 4px;
+  margin: 5px 0;
+  background-color: #dbddef;
+}
+
+.card-1 {
+  animation: switch-1 5s ease-in-out infinite both;
+}
+
+.card-2 {
+  animation: switch-2 5s ease-in-out infinite both;
+}
+
+.card-3 {
+  animation: switch-3 5s ease-in-out infinite both;
+}
+
+/* animation */
+@keyframes switch-1 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.3);
+  }
+  33.33% {
+    transform: translate3d(135px, 0, -40px);
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+  66.66% {
+    transform: translate3d(-135px, 0, -40px);
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes switch-2 {
+  0%,
+  100% {
+    transform: translate3d(-135px, 0, -40px);
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+  33.33% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.3);
+  }
+  66.66% {
+    transform: translate3d(135px, 0, -40px);
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes switch-3 {
+  0%,
+  100% {
+    transform: translate3d(135px, 0, -40px);
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+  33.33% {
+    transform: translate3d(-135px, 0, -40px);
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+  66.66% {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.3);
+  }
+}
