@@ -1,0 +1,48 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #d1fa85;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  top: 160px;
+  left: 165px;
+}
+
+.logo > svg {
+  width: 70px;
+  height: 80px;
+}
+
+.logo.white {
+  fill: #fff;
+}
+
+.logo.green {
+  fill: #d1fa85;
+}
+
+.logo.normal {
+  transform: scale(1);
+  transition: all 500ms ease-in-out 300ms;
+}
+
+.logo.small {
+  transform: scale(0);
+  transition: all 500ms ease-in;
+}
+
+.logo.big {
+  transform: scale(10);
+  transition: all 500ms ease-in;
+}
