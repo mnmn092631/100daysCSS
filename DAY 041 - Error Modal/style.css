@@ -1,0 +1,100 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: rgb(61, 78, 101);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.4);
+  animation: show-modal 700ms ease-in-out;
+}
+
+.modal.hide {
+  animation: hide-modal 600ms ease-in-out both;
+}
+
+.modal > img {
+  width: 40px;
+  height: auto;
+  margin-top: 25px;
+}
+
+.title {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 20px;
+  color: #686565;
+}
+
+.modal > p {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0 10%;
+  text-align: center;
+  color: #8a8787;
+  font-weight: 300;
+}
+
+.button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 0;
+  color: #fff;
+  border: none;
+  border-radius: 0 0 5px 5px;
+  background-color: #f65656;
+  font-size: 16px;
+  transition: background-color 350ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #ec3434;
+}
+
+/* animation */
+@keyframes show-modal {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hide-modal {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
