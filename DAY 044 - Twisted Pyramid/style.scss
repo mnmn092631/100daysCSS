@@ -1,0 +1,41 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #000;
+}
+
+.rect {
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid #fff;
+}
+
+@for $i from 1 to 20 {
+  .rect-#{$i} {
+    width: 210 - ($i * 10) + px;
+    height: 210 - ($i * 10) + px;
+    top: (400 - (210 - ($i * 10)))/2 + px;
+    left: (400 - (210 - ($i * 10)))/2 + px;
+    border-color: rgb(70 + ($i * 8), 70 + ($i * 8), 70 + ($i * 8));
+    animation: rotate 2s ease-in-out ($i / 30) + s alternate infinite;
+    z-index: $i;
+  }
+}
+
+/* animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
