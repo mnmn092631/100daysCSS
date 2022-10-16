@@ -1,0 +1,68 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: rgb(211, 162, 255);
+  background: radial-gradient(
+    circle,
+    rgba(211, 162, 255, 1) 0%,
+    rgba(241, 228, 252, 1) 70%
+  );
+  transform: perspective(60px);
+  transform-style: preserve-3d;
+}
+
+.ring {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 100px;
+  left: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+@for $i from 1 to 7 {
+  .ring-#{$i} {
+    animation: inOut-#{$i} 6s ease-in-out alternate infinite;
+
+    .dot {
+      opacity: (1 - (($i - 1)/10));
+    }
+  }
+}
+
+@for $i from 1 to 13 {
+  .dot-#{$i} {
+    transform: translate(0, -100px) rotate((($i - 1) * 30) + deg);
+    transform-origin: 0 100px;
+  }
+}
+
+/* animation */
+@for $i from 1 to 7 {
+  @keyframes inOut-#{$i} {
+    0% {
+      transform: scale(1 - (($i - 1) / 7)) rotate(((($i - 1)) * 5) + deg);
+    }
+    100% {
+      transform: scale((1 - (($i - 1)) / 22))
+        rotate(((($i - 1) * 10) + 360) + deg);
+    }
+  }
+}
