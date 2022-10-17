@@ -1,0 +1,38 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #9ebafa;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  box-sizing: border-box;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #adc3f8;
+  cursor: pointer;
+}
+
+label:hover {
+  background-color: #839bd2;
+  border-color: #839bd2;
+}
+
+input:checked ~ label {
+  background-color: #fff;
+  border-color: #fff;
+}
