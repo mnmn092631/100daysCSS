@@ -1,0 +1,72 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ff809e;
+}
+
+.center {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  perspective: 600px;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px) rotateX(-45deg) rotateY(45deg);
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+}
+
+.cube:hover {
+  transform: translateZ(-100px) rotateX(235deg) rotateY(-235deg);
+}
+
+.side {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+
+.front {
+  transform: translateZ(100px);
+  background-color: #fff;
+}
+
+.back {
+  transform: rotateX(180deg) translateZ(100px);
+  background-color: #ccc;
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+  background-color: #ddd;
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+  background-color: #eee;
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+  background-color: #eee;
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background-color: #ddd;
+}
