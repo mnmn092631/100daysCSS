@@ -1,0 +1,79 @@
+.frame {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #7b6f8d;
+}
+
+.trigger {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: none;
+  opacity: 0;
+}
+
+.mouseFollow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  transform: translate(200px, 200px);
+  border-radius: 50%;
+  background-color: #fff;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+
+  &::after {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: pulsate 1.5s ease-out infinite;
+  }
+}
+
+$row: 1;
+$column: 1;
+
+@for $i from 1 through (400) {
+  @if ($row * 20) < $i {
+    $row: $row + 1;
+  }
+
+  $column: $i - (($row - 1) * 20);
+
+  $top: (($row * 20) - 10) + px;
+  $left: (($column * 20) - 10) + px;
+
+  .trigger-#{$i}:hover ~ .mouseFollow {
+    transform: translate($left, $top);
+  }
+}
+
+/* animation */
+@keyframes pulsate {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
