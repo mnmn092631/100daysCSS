@@ -1,0 +1,66 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #bfe167;
+}
+
+.ring {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 160px;
+  left: 160px;
+
+  .dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 40px;
+    left: 40px;
+
+    .fill {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  }
+}
+
+@for $i from 1 through 10 {
+  $dotsPerCircle: (12 + ($i * 6));
+
+  .ring-#{$i} {
+    .fill {
+      animation: pulsate 2s ease-in-out ($i/3) + s alternate infinite both;
+    }
+
+    @for $j from 1 through $dotsPerCircle {
+      $angle: 360 / $dotsPerCircle;
+
+      .dot-#{$j} {
+        transform: translate3d(0, ((40 + (($i - 1) * 11)) * -1) + px, 0)
+          rotate((($j - 1) * $angle) + deg);
+        transform-origin: 0 (40 + (($i - 1) * 11)) + px;
+      }
+    }
+  }
+}
+
+/* animation */
+@keyframes pulsate {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
