@@ -1,0 +1,140 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #29373b;
+}
+
+.thermostat {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.thermostat:hover > .control > .indicator {
+  transform: rotate(-20deg);
+}
+
+.thermostat:hover > .control > .temp_room {
+  opacity: 0;
+  transform: translateX(-50px) scale(0.5);
+}
+
+.thermostat:hover > .control > .temp_room.two {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ring {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: 10px;
+  left: 10px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  box-shadow: inset 2px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  background: rgb(32, 79, 140);
+  background: linear-gradient(
+    90deg,
+    rgba(32, 79, 140, 1) 0%,
+    rgba(166, 33, 33, 1) 100%
+  );
+}
+
+.ring > .bottom_overlay {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+  border-radius: 0 0 95px 0;
+  background-color: #fff;
+}
+
+.control {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 35px;
+  left: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.indicator {
+  position: absolute;
+  left: 64px;
+  width: 2px;
+  height: 15px;
+  transform-origin: 50% 65px;
+  background-color: #707070;
+  transform: rotate(-50deg);
+  transition: transform 500ms ease-in-out;
+}
+
+.temp_outside {
+  position: absolute;
+  top: 22px;
+  left: 6px;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: #737373;
+}
+
+.temp_room {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  padding-right: 10px;
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: -0.1em;
+  line-height: 60px;
+  color: #3b4877;
+  transition: all 500ms ease-in-out;
+}
+
+.temp_room > span {
+  position: relative;
+  top: -30px;
+  left: 5px;
+  font-size: 20px;
+}
+
+.temp_room.two {
+  color: #504267;
+  opacity: 0;
+  transform: translateX(50px) scale(0.5);
+}
+
+.room {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: #737373;
+}
