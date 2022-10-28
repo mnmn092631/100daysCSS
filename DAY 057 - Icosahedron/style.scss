@@ -1,0 +1,145 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #85a6cb;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+}
+
+.ikosaeder {
+  width: 160px;
+  height: 280px;
+  transform-style: preserve-3d;
+  transform: rotateX(-40deg) rotateY(-40deg);
+  transition: all 3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: rotateX(-400deg) rotateY(-400deg);
+
+    .side {
+      opacity: 0.5;
+    }
+  }
+}
+
+.side {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 80px 138.56px 80px;
+  transform-origin: 50% 100%;
+  transition: all 3s ease-in-out;
+}
+
+.side-1 {
+  border-color: transparent transparent #5bab94 transparent;
+  transform: translateZ(129.2px) rotateZ(90deg) rotateX(159.095deg);
+}
+.side-2 {
+  border-color: transparent transparent #5c8c9e transparent;
+  transform: translateZ(129.2px) rotateZ(-90deg) rotateX(159.095deg);
+}
+.side-3 {
+  border-color: transparent transparent #5bab94 transparent;
+  transform: translateZ(-129.2px) rotateZ(90deg) rotateX(-159.095deg);
+}
+.side-4 {
+  border-color: transparent transparent #5c8c9e transparent;
+  transform: translateZ(-129.2px) rotateZ(-90deg) rotateX(-159.095deg);
+}
+.side-5 {
+  border-color: transparent transparent #5bab94 transparent;
+  transform: rotateY(-90deg) translateZ(129.2px) rotateX(20.905deg);
+}
+.side-6 {
+  border-color: transparent transparent #5c8c9e transparent;
+  transform: rotateY(-90deg) translateZ(129.2px) rotateX(159.095deg);
+}
+.side-7 {
+  border-color: transparent transparent #5bab94 transparent;
+  transform: rotateY(-90deg) translateZ(-129.2px) rotateX(-20.905deg);
+}
+.side-8 {
+  border-color: transparent transparent #5c8c9e transparent;
+  transform: rotateY(-90deg) translateZ(-129.2px) rotateX(-159.095deg);
+}
+.side-9 {
+  border-color: transparent transparent #5bab94 transparent;
+  transform: translateY(129.2px) rotateX(69.095deg);
+}
+.side-10 {
+  border-color: transparent transparent #5c8c9e transparent;
+  transform: translateY(129.2px) rotateX(-69.095deg);
+}
+.side-11 {
+  border-color: transparent transparent #5bab94 transparent;
+  transform: translateY(-129.2px) rotateX(110.905deg);
+}
+.side-12 {
+  border-color: transparent transparent #5c8c9e transparent;
+  transform: translateY(-129.2px) rotateX(-110.905deg);
+}
+.side-13 {
+  border-width: 138.56px 80px 0 80px;
+  border-color: #60b5b5 transparent transparent transparent;
+  transform: translateY(-129.2px) translateX(80px) rotateX(-135deg)
+    rotateY(-35.264deg) rotateZ(-8deg);
+}
+.side-14 {
+  border-width: 138.56px 80px 0 80px;
+  border-color: #60b5b5 transparent transparent transparent;
+  transform: translateY(-129.2px) translateX(80px) rotateX(135deg)
+    rotateY(35.264deg) rotateZ(-8deg);
+}
+.side-15 {
+  border-width: 138.56px 80px 0 80px;
+  border-color: #60b5b5 transparent transparent transparent;
+  transform: translateY(-129.2px) translateX(-80px) rotateX(-135deg)
+    rotateY(35.264deg) rotateZ(8deg);
+}
+.side-16 {
+  border-width: 138.56px 80px 0 80px;
+  border-color: #60b5b5 transparent transparent transparent;
+  transform: translateY(-129.2px) translateX(-80px) rotateX(135deg)
+    rotateY(-35.264deg) rotateZ(8deg);
+}
+.side-17 {
+  border-width: 138.56px 80px 0 80px;
+  border-color: #60b5b5 transparent transparent transparent;
+  transform: translateY(129.2px) translateX(80px) rotateX(45deg)
+    rotateY(-35.264deg) rotateZ(-8deg);
+}
+.side-18 {
+  border-width: 138.56px 80px 0 80px;
+  border-color: #60b5b5 transparent transparent transparent;
+  transform: translateY(129.2px) translateX(80px) rotateX(-45deg)
+    rotateY(35.264deg) rotateZ(-8deg);
+}
+.side-19 {
+  border-width: 138.56px 80px 0 80px;
+  border-color: #60b5b5 transparent transparent transparent;
+  transform: translateY(129.2px) translateX(-80px) rotateX(45deg)
+    rotateY(35.264deg) rotateZ(8deg);
+}
+.side-20 {
+  border-width: 138.56px 80px 0 80px;
+  border-color: #60b5b5 transparent transparent transparent;
+  transform: translateY(129.2px) translateX(-80px) rotateX(-45deg)
+    rotateY(-35.264deg) rotateZ(8deg);
+}
