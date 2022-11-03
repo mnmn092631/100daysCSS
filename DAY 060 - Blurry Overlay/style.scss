@@ -1,0 +1,70 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #8c8377;
+}
+
+.trigger {
+  position: absolute;
+  left: 0;
+  width: 400px;
+  height: 10px;
+  cursor: pointer;
+}
+
+@for $i from 0 through 200 {
+  .trigger-#{$i} {
+    top: (($i - 1) * 2) + px;
+
+    &:hover ~ .plane {
+      height: ($i * 2) + px;
+      transition: initial;
+    }
+  }
+}
+
+.plane {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 200px;
+  pointer-events: none;
+  background-color: #d9cdbf;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.text-front {
+  position: absolute;
+  width: 400px;
+  top: 169px;
+  color: transparent;
+  text-align: center;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 60px;
+  text-shadow: 0 0 10px #8c8377;
+  pointer-events: none;
+}
+
+.text-back {
+  position: absolute;
+  width: 400px;
+  top: 169px;
+  color: #d9cdbf;
+  text-align: center;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 60px;
+  pointer-events: none;
+}
