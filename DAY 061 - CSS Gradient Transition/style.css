@@ -1,0 +1,53 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+}
+
+div[class^="gradient"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+}
+
+.gradient-1 {
+  background: #aaa3d9;
+  background: linear-gradient(135deg, #aaa3d9 0%, #79baf2 100%);
+}
+
+.gradient-2 {
+  background: #a498ec;
+  background: linear-gradient(135deg, #a498ec 0%, #f2b591 100%);
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: gradient 2s ease-in-out alternate infinite;
+  animation: gradient 2s ease-in-out alternate infinite;
+}
+
+/* animation */
+@-webkit-keyframes gradient {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes gradient {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} /*# sourceMappingURL=style.css.map */
