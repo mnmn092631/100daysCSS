@@ -1,0 +1,150 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ecebeb;
+}
+
+.plan {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  width: 100px;
+  height: 150px;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.plan:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.plan:hover > .title {
+  background-color: #30b9eb;
+}
+
+.plan:hover > .price {
+  color: #30b9eb;
+}
+
+.plan.basic:hover ~ .datas > .data > .line > .fill {
+  width: 20px;
+}
+
+.plan.pro:hover ~ .datas > .data.users > .line > .fill {
+  width: 50px;
+}
+
+.plan.pro:hover ~ .datas > .data.gb > .line > .fill {
+  width: 250px;
+}
+
+.plan.pro:hover ~ .datas > .data.projects > .line > .fill {
+  width: 200px;
+}
+
+.plan.premium:hover ~ .datas > .data > .line > .fill {
+  width: 100%;
+}
+
+.plan > .title {
+  width: 100%;
+  height: 30px;
+  border-radius: 4px 4px 0 0;
+  background-color: #79bed8;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  color: #fff;
+  transition: all 300ms ease-in-out;
+}
+
+.plan > .price {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #525a5a;
+  transition: all 300ms ease-in-out;
+}
+
+.plan > .price > span {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: initial;
+}
+
+.plan > .lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan > .lines > .line {
+  margin: 2px auto;
+  height: 4px;
+  background-color: #ecebeb;
+}
+
+.plan.pro {
+  left: 150px;
+}
+
+.plan.premium {
+  left: 265px;
+}
+
+.datas {
+  box-sizing: border-box;
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+  width: 370px;
+  height: 170px;
+  background-color: #fff;
+  color: #525a5a;
+  font-size: 14px;
+  line-height: 14px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.data > .text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.data > .line {
+  width: 340px;
+  height: 10px;
+  border-radius: 4px;
+  background-color: #ecebeb;
+}
+
+.data > .line > .fill {
+  width: 0;
+  height: 10px;
+  border-radius: 4px;
+  background-color: #30b9eb;
+  transition: all 300ms ease-in-out;
+}
