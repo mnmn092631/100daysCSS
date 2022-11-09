@@ -1,0 +1,51 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #87d4b6;
+}
+
+.form {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
+}
+
+.ellipse {
+  position: absolute;
+  top: 0;
+  left: 105px;
+  width: 90px;
+  height: 300px;
+  border: 1px solid #fff;
+}
+
+@for $i from 1 through 18 {
+  .ellipse-#{$i} {
+    animation: ellipse-#{$i} 5s ease-in-out infinite;
+  }
+
+  @keyframes ellipse-#{$i} {
+    0% {
+      transform: rotate((10 * ($i - 1)) + deg);
+      border-radius: 50%;
+    }
+    50% {
+      transform: rotate(0) scaleX(calc(2 / 0.6));
+      border-radius: 0%;
+    }
+    100% {
+      transform: rotate(((-10 * ($i - 1)) + 360) + deg);
+      border-radius: 50%;
+    }
+  }
+}
