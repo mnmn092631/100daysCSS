@@ -1,0 +1,159 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #546667;
+}
+
+.checkbox {
+  position: absolute;
+  top: 180px;
+  left: 180px;
+  width: 40px;
+  height: 40px;
+}
+.checkbox #cb-1 {
+  display: none;
+}
+.checkbox #cb-1:checked ~ .toggle {
+  border-width: 14px;
+  background-color: #81b0b3;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2),
+    inset 2px 2px 4px 0 rgba(0, 0, 0, 0);
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-1 {
+  transform: rotate(0deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-2 {
+  transform: rotate(30deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-3 {
+  transform: rotate(60deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-4 {
+  transform: rotate(90deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-5 {
+  transform: rotate(120deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-6 {
+  transform: rotate(150deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-7 {
+  transform: rotate(180deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-8 {
+  transform: rotate(210deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-9 {
+  transform: rotate(240deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-10 {
+  transform: rotate(270deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-11 {
+  transform: rotate(300deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.checkbox #cb-1:checked ~ .sparkles .sparkle-12 {
+  transform: rotate(330deg) translateY(-50px) scaleY(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.toggle {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 350ms ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2),
+    inset 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sparkles {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+}
+.sparkles .sparkle {
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  top: 12px;
+  left: 19px;
+  background-color: #fff;
+  transition: none;
+}
+.sparkles .sparkle-1 {
+  transform: rotate(0deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-2 {
+  transform: rotate(30deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-3 {
+  transform: rotate(60deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-4 {
+  transform: rotate(90deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-5 {
+  transform: rotate(120deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-6 {
+  transform: rotate(150deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-7 {
+  transform: rotate(180deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-8 {
+  transform: rotate(210deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-9 {
+  transform: rotate(240deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-10 {
+  transform: rotate(270deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-11 {
+  transform: rotate(300deg) translateY(-15px) scaleY(0);
+}
+.sparkles .sparkle-12 {
+  transform: rotate(330deg) translateY(-15px) scaleY(0);
+} /*# sourceMappingURL=style.css.map */
